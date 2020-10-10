@@ -1,6 +1,7 @@
 {
   "name": "boxnovel-scraper",
-  "version": "0.1.0",
+  "version": "1.0.1",
+  "homepage": "http://devwulf.github.io/boxnovel-scraper",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -24,7 +25,9 @@
     "eject": "react-scripts eject",
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
-    "setup": "npm install tailwindcss postcss-cli autoprefixer@9.0.0 -D"
+    "setup": "npm install tailwindcss postcss-cli autoprefixer@9.0.0 -D",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
