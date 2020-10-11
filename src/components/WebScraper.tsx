@@ -1,6 +1,7 @@
 import React from "react";
 import cheerio, { html } from "cheerio";
 import { ThemeContext } from "./ThemeProvider";
+import LoadingBar from "./LoadingBar";
 
 export type TextElement = {
     isTitle: boolean;
@@ -17,6 +18,9 @@ export type WebScraperProps = {
 
 export type WebScraperState = {
     elements: TextElement[];
+    pagesLoaded: number;
+    totalPages: number;
+    isLoading: boolean;
 }
 
 export default class WebScraper extends React.Component<WebScraperProps, WebScraperState> {
@@ -24,7 +28,10 @@ export default class WebScraper extends React.Component<WebScraperProps, WebScra
         super(props);
 
         this.state = {
-            elements: []
+            elements: [],
+            pagesLoaded: 0,
+            totalPages: 0,
+            isLoading: false
         };
 
         this.loadSinglePage = this.loadSinglePage.bind(this);
@@ -47,9 +54,9 @@ export default class WebScraper extends React.Component<WebScraperProps, WebScra
     }
 
     async loadPages() {
-        console.log("test");
         const { chapterFrom, chapterTo } = this.props;
         const elements: TextElement[] = [];
+        this.setState({isLoading: true, pagesLoaded: 0, totalPages: (chapterTo - chapterFrom) + 1});
 
         for (var i = chapterFrom; i <= chapterTo; i++) {
             const html = await this.loadSinglePage(i);
@@ -65,9 +72,11 @@ export default class WebScraper extends React.Component<WebScraperProps, WebScra
                     elements.push({ isTitle: !titleFound && index === 0, value: $(element).text()});
                 });
             }
+
+            this.setState(prevState => ({pagesLoaded: prevState.pagesLoaded + 1}));
         }
 
-        this.setState({elements});
+        this.setState({elements: elements, isLoading: false});
     }
 
     clearPage() {
@@ -75,23 +84,30 @@ export default class WebScraper extends React.Component<WebScraperProps, WebScra
     }
 
     render() {
-        const { elements } = this.state;
+        const { pagesLoaded, totalPages, isLoading, elements } = this.state;
 
         return(
             <ThemeContext.Consumer>
                 {(theme => (
-                    <article className={`px-4 ${theme.theme.background} ${theme.theme.foreground}`}>
-                        <section>
-                            {elements.map((element, index) => 
-                                (element.isTitle &&
-                                    <h3 key={index} className="text-xl font-medium mt-6 mb-4">{element.value}</h3>
-                                ) || 
-                                (!element.isTitle &&
-                                    <p key={index} className="pb-2">{element.value}</p>
-                                )
-                            )}
-                        </section>
-                    </article>
+                    <>
+                        <div className="">
+                            <div className={`${isLoading ? "" : "hidden"}`}>
+                                <LoadingBar currentItems={pagesLoaded} totalItems={totalPages} />
+                            </div>
+                        </div>
+                        <article className={`px-4 ${theme.theme.background} ${theme.theme.foreground}`}>
+                            <section>
+                                {elements.map((element, index) => 
+                                    (element.isTitle &&
+                                        <h3 key={index} className="text-xl font-medium mt-6 mb-4">{element.value}</h3>
+                                    ) || 
+                                    (!element.isTitle &&
+                                        <p key={index} className="pb-2">{element.value}</p>
+                                    )
+                                )}
+                            </section>
+                        </article>
+                    </>
                 ))}
             </ThemeContext.Consumer>
         );
