@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/boxnovel-scraper/static/css/main.812ab637.chunk.css",
-    "main.js": "/boxnovel-scraper/static/js/main.8061f142.chunk.js",
-    "main.js.map": "/boxnovel-scraper/static/js/main.8061f142.chunk.js.map",
+    "main.js": "/boxnovel-scraper/static/js/main.0bfff6c0.chunk.js",
+    "main.js.map": "/boxnovel-scraper/static/js/main.0bfff6c0.chunk.js.map",
     "runtime-main.js": "/boxnovel-scraper/static/js/runtime-main.2358e537.js",
     "runtime-main.js.map": "/boxnovel-scraper/static/js/runtime-main.2358e537.js.map",
-    "static/js/2.7c36fbd4.chunk.js": "/boxnovel-scraper/static/js/2.7c36fbd4.chunk.js",
-    "static/js/2.7c36fbd4.chunk.js.map": "/boxnovel-scraper/static/js/2.7c36fbd4.chunk.js.map",
+    "static/js/2.cdaa466e.chunk.js": "/boxnovel-scraper/static/js/2.cdaa466e.chunk.js",
+    "static/js/2.cdaa466e.chunk.js.map": "/boxnovel-scraper/static/js/2.cdaa466e.chunk.js.map",
     "index.html": "/boxnovel-scraper/index.html",
-    "precache-manifest.98942b41d89c15f539d08168a4901301.js": "/boxnovel-scraper/precache-manifest.98942b41d89c15f539d08168a4901301.js",
+    "precache-manifest.c7875c5cf2c3323b39b17718a7930501.js": "/boxnovel-scraper/precache-manifest.c7875c5cf2c3323b39b17718a7930501.js",
     "service-worker.js": "/boxnovel-scraper/service-worker.js",
     "static/css/main.812ab637.chunk.css.map": "/boxnovel-scraper/static/css/main.812ab637.chunk.css.map",
-    "static/js/2.7c36fbd4.chunk.js.LICENSE.txt": "/boxnovel-scraper/static/js/2.7c36fbd4.chunk.js.LICENSE.txt"
+    "static/js/2.cdaa466e.chunk.js.LICENSE.txt": "/boxnovel-scraper/static/js/2.cdaa466e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2358e537.js",
-    "static/js/2.7c36fbd4.chunk.js",
+    "static/js/2.cdaa466e.chunk.js",
     "static/css/main.812ab637.chunk.css",
-    "static/js/main.8061f142.chunk.js"
+    "static/js/main.0bfff6c0.chunk.js"
   ]
 }
