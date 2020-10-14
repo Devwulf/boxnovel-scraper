@@ -1,5 +1,5 @@
 import React from "react";
-import cheerio, { html } from "cheerio";
+import cheerio from "cheerio";
 import { ThemeContext } from "./ThemeProvider";
 import LoadingBar from "./LoadingBar";
 
@@ -63,12 +63,13 @@ export default class WebScraper extends React.Component<WebScraperProps, WebScra
             if (html) {
                 const $ = cheerio.load(html);
                 let titleFound: boolean = false;
-                $("div.text-left h3").each((index, element) => {
+                const rootDiv = $("div.text-left");
+                rootDiv.find("h1, h2, h3, h4, h5, h6").each((index, element) => {
                     elements.push({ isTitle: true, value: $(element).text()});
                     titleFound = true;
                 });
 
-                $("div.text-left p").each((index, element) => {
+                rootDiv.find("p").each((index, element) => {
                     elements.push({ isTitle: !titleFound && index === 0, value: $(element).text()});
                 });
             }

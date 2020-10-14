@@ -1,6 +1,6 @@
 {
   "name": "boxnovel-scraper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "http://devwulf.github.io/boxnovel-scraper",
   "private": true,
   "dependencies": {
