@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/boxnovel-scraper/precache-manifest.6239a28da7f1a8e9530cd3450886581e.js"
+  "/boxnovel-scraper/precache-manifest.641f10b4cf2012f0ace2e6b774725a2f.js"
 );
 
 self.addEventListener('message', (event) => {
