@@ -60,7 +60,7 @@ export default class ReadLightNovelScraper extends React.Component<ReadLightNove
                 const $ = cheerio.load(html);
                 let titleFound: boolean = false;
                 const rootDiv = $("div.chapter-content3");
-                rootDiv.find("h1, h2, h3, h4, h5, h6").each((index, element) => {
+                rootDiv.find("div.desc > h1, h2, h3, h4, h5, h6").each((index, element) => {
                     if (titleFound)
                         return;
 
@@ -68,7 +68,7 @@ export default class ReadLightNovelScraper extends React.Component<ReadLightNove
                     titleFound = true;
                 });
 
-                rootDiv.find("p").each((index, element) => {
+                rootDiv.find("div.desc > p").each((index, element) => {
                     elements.push({ isTitle: !titleFound && index === 0, value: $(element).text()});
                 });
             }
