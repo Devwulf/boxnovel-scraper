@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f0446d5e957c0fae889b5d2db522fefa",
+    "revision": "9f176e02c997e9e1d21b2c9932dfd138",
     "url": "/boxnovel-scraper/index.html"
   },
   {
-    "revision": "439af8c129016b7af9d4",
+    "revision": "88261c073f819cb7abdf",
     "url": "/boxnovel-scraper/static/css/main.812ab637.chunk.css"
   },
   {
-    "revision": "2f63bbb804912cff5dbc",
-    "url": "/boxnovel-scraper/static/js/2.cdaa466e.chunk.js"
+    "revision": "a2a5651d91bd92ef936b",
+    "url": "/boxnovel-scraper/static/js/2.ece30e84.chunk.js"
   },
   {
     "revision": "3ade1d5c1f899f8112cc5ef9f37b3e61",
-    "url": "/boxnovel-scraper/static/js/2.cdaa466e.chunk.js.LICENSE.txt"
+    "url": "/boxnovel-scraper/static/js/2.ece30e84.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "439af8c129016b7af9d4",
-    "url": "/boxnovel-scraper/static/js/main.c4fabbb6.chunk.js"
+    "revision": "88261c073f819cb7abdf",
+    "url": "/boxnovel-scraper/static/js/main.87daf3b0.chunk.js"
   },
   {
     "revision": "e342b73e27b7740747bf",
