@@ -2,12 +2,13 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import "./assets/main.css";
-import WebScraper from "./components/WebScraper";
+import BoxNovelScraper from "./components/BoxNovelScraper";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ThemeContext, ThemeProvider } from "./components/ThemeProvider";
+import ReadLightNovelScraper from "./components/ReadLightNovelScraper";
 
 library.add(fas);
 
@@ -61,11 +62,11 @@ export default class App extends React.Component<AppProps, AppState> {
                             <nav className={`${isNavOpen ? "" : "hidden"} options p-4 bg-gray-800`}>
                                 <div className="flex flex-col mb-4">
                                     <label className="mb-1 font-medium text-gray-100">Website</label>
-                                    <select className="px-1 rounded text-lg border-2 border-gray-500 bg-gray-300" 
-                                        disabled
+                                    <select className="px-1 rounded text-lg border-2 border-gray-500 bg-gray-300"
                                         value={website}
                                         onChange={event => this.setState({website: event.target.value})}>
                                         <option value="BoxNovel">Box Novel (boxnovel.com)</option>
+                                        <option value="ReadLightNovel">Read Light Novel (readlightnovel.org)</option>
                                     </select>
                                 </div>
                                 <div className="flex flex-col mb-4">
@@ -124,11 +125,21 @@ export default class App extends React.Component<AppProps, AppState> {
                             </button>
                 
                             <main className="reading-content">
-                                <WebScraper novelId={novelId} 
-                                    chapterFrom={chapterFrom} 
-                                    chapterTo={chapterTo}
-                                    loadPage={callable => this.setState({loadPage: callable})}
-                                    clearPage={callable => this.setState({clearPage: callable})} />
+                                {(website === "BoxNovel" &&
+                                    <BoxNovelScraper novelId={novelId} 
+                                        chapterFrom={chapterFrom} 
+                                        chapterTo={chapterTo}
+                                        loadPage={callable => this.setState({loadPage: callable})}
+                                        clearPage={callable => this.setState({clearPage: callable})} />
+                                ) ||
+                                (website === "ReadLightNovel" &&
+                                    
+                                    <ReadLightNovelScraper novelId={novelId} 
+                                        chapterFrom={chapterFrom} 
+                                        chapterTo={chapterTo}
+                                        loadPage={callable => this.setState({loadPage: callable})}
+                                        clearPage={callable => this.setState({clearPage: callable})} />
+                                )}
                             </main>
                         </div>
                     ))}

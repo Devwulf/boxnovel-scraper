@@ -8,7 +8,7 @@ export type TextElement = {
     value: string;
 }
 
-export type WebScraperProps = {
+export type BoxNovelScraperProps = {
     novelId: string;
     chapterFrom: number;
     chapterTo: number;
@@ -16,15 +16,15 @@ export type WebScraperProps = {
     clearPage: (callable: () => void) => void;
 }
 
-export type WebScraperState = {
+export type BoxNovelScraperState = {
     elements: TextElement[];
     pagesLoaded: number;
     totalPages: number;
     isLoading: boolean;
 }
 
-export default class WebScraper extends React.Component<WebScraperProps, WebScraperState> {
-    constructor(props: WebScraperProps) {
+export default class BoxNovelScraper extends React.Component<BoxNovelScraperProps, BoxNovelScraperState> {
+    constructor(props: BoxNovelScraperProps) {
         super(props);
 
         this.state = {
