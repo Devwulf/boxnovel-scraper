@@ -43,7 +43,7 @@ export default class ReadLightNovelScraper extends React.Component<ReadLightNove
     async loadSinglePage(chapter: number): Promise<string> {
         const { novelId } = this.props;
 
-        const html = await fetch(`https://cors-anywhere.herokuapp.com/https://www.readlightnovel.org/${novelId}/chapter-${chapter}/`)
+        const html = await fetch(`https://cors.devwulfcodes.com/https://www.readlightnovel.org/${novelId}/chapter-${chapter}/`)
             .then(response => response.text());
         
         return html;

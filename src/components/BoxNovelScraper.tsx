@@ -47,7 +47,7 @@ export default class BoxNovelScraper extends React.Component<BoxNovelScraperProp
     async loadSinglePage(chapter: number): Promise<string> {
         const { novelId } = this.props;
 
-        const html = await fetch(`https://cors-anywhere.herokuapp.com/https://boxnovel.com/novel/${novelId}/chapter-${chapter}/`)
+        const html = await fetch(`https://cors.devwulfcodes.com/https://boxnovel.com/novel/${novelId}/chapter-${chapter}/`)
             .then(response => response.text());
         
         return html;
