@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "62b924ddb7d275e35d5aea2a743f9b46",
+    "revision": "2475e63670f6ee2832f1b3f43c6da243",
     "url": "/boxnovel-scraper/index.html"
   },
   {
-    "revision": "00e07f489e84bba6a647",
+    "revision": "1a5769ef51b83abf4f6c",
     "url": "/boxnovel-scraper/static/css/main.812ab637.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/boxnovel-scraper/static/js/2.ece30e84.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "00e07f489e84bba6a647",
-    "url": "/boxnovel-scraper/static/js/main.640173ae.chunk.js"
+    "revision": "1a5769ef51b83abf4f6c",
+    "url": "/boxnovel-scraper/static/js/main.b7d4bd51.chunk.js"
   },
   {
     "revision": "e342b73e27b7740747bf",

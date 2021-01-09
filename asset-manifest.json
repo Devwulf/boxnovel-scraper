@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/boxnovel-scraper/static/css/main.812ab637.chunk.css",
-    "main.js": "/boxnovel-scraper/static/js/main.640173ae.chunk.js",
-    "main.js.map": "/boxnovel-scraper/static/js/main.640173ae.chunk.js.map",
+    "main.js": "/boxnovel-scraper/static/js/main.b7d4bd51.chunk.js",
+    "main.js.map": "/boxnovel-scraper/static/js/main.b7d4bd51.chunk.js.map",
     "runtime-main.js": "/boxnovel-scraper/static/js/runtime-main.2358e537.js",
     "runtime-main.js.map": "/boxnovel-scraper/static/js/runtime-main.2358e537.js.map",
     "static/js/2.ece30e84.chunk.js": "/boxnovel-scraper/static/js/2.ece30e84.chunk.js",
     "static/js/2.ece30e84.chunk.js.map": "/boxnovel-scraper/static/js/2.ece30e84.chunk.js.map",
     "index.html": "/boxnovel-scraper/index.html",
-    "precache-manifest.10fd6b3a37b0143da796a8fa21c1e50b.js": "/boxnovel-scraper/precache-manifest.10fd6b3a37b0143da796a8fa21c1e50b.js",
+    "precache-manifest.b053ef6318a5da05d0da5b2431809545.js": "/boxnovel-scraper/precache-manifest.b053ef6318a5da05d0da5b2431809545.js",
     "service-worker.js": "/boxnovel-scraper/service-worker.js",
     "static/css/main.812ab637.chunk.css.map": "/boxnovel-scraper/static/css/main.812ab637.chunk.css.map",
     "static/js/2.ece30e84.chunk.js.LICENSE.txt": "/boxnovel-scraper/static/js/2.ece30e84.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.2358e537.js",
     "static/js/2.ece30e84.chunk.js",
     "static/css/main.812ab637.chunk.css",
-    "static/js/main.640173ae.chunk.js"
+    "static/js/main.b7d4bd51.chunk.js"
   ]
 }
